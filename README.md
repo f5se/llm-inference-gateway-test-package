@@ -60,6 +60,9 @@ python app_sglang3.py # 端口8015
 ```bash
 cd Mock-API/f5-mock-api
 python f5-mock-api-updated.py  # 默认端口8443
+#以下命令启动表示将pool member的IP都设置为host.docker.internal这个FQDN
+#用于当在本地容器中运行scheduler调度器时，调度器可以通过该FQDN访问到在宿主机中启动的LLM mock API
+python f5-mock-api-updated.py --localdocker 1 
 ```
 
 ### 2. 启动监控系统
